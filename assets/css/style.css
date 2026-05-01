@@ -187,29 +187,31 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
 
-    width: 85%;
+    width: 99%;
     max-width: 420px;
 
     font-family: 'Playfair Display', serif;
     font-weight: 500;
-    font-size: 1.6rem;
+
+    /* 🔥 TEXTO RESPONSIVO */
+    font-size: clamp(1rem, 4.5vw, 1.6rem);
     line-height: 1.4;
-    letter-spacing: 1px;
 
     color: #000;
-    /* 🔥 texto preto */
-
     text-align: center;
     z-index: 2;
 
-    /* ❌ removido fundo */
-    background: none;
-    padding: 0;
+    /* 🔥 GLASS */
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 
-    /* 🔥 SOMBRA PARA DESTAQUE */
-    text-shadow:
-        1px 2px 1px rgb(255, 255, 255),
-        0px 4px 12px rgba(0, 0, 0, 0.6);
+    padding: clamp(12px, 3vw, 20px);
+    border-radius: 16px;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
 }
 
 
@@ -226,36 +228,35 @@ body {
 }
 
 /* ===== TEXTO ===== */
+
 .text-box {
     width: 99%;
     max-width: 400px;
-    top: 60%;
-    left: 50%;
-    transform: translate(2%, -40%);
 
     font-family: 'Playfair Display', serif;
 
-    font-size: 1.6rem;
+    /* 🔥 TEXTO RESPONSIVO */
+    font-size: clamp(1rem, 4vw, 1.5rem);
     line-height: 1.6;
-    letter-spacing: 0.5px;
 
     color: #000;
     text-align: center;
 
-    /* melhora leitura */
-    padding: 15px 10px;
+    padding: clamp(14px, 3vw, 22px);
 
-    border-radius: 12px;
+    /* 🔥 GLASS */
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 
-    /* sombra mais equilibrada */
-    text-shadow:
-        0px 2px 3px rgba(255, 255, 255, 0.8),
-        0px 3px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 16px;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
 
     white-space: pre-line;
 }
-
-
 
 /* BOTÕES */
 .overlay-text-scene4 {
@@ -311,50 +312,60 @@ body {
 .content-scene5 {
     width: 100%;
     max-width: 420px;
+    height: 100%;
 
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly; /* 🔥 distribui melhor */
     align-items: center;
-    gap: 6px;
+
+    padding: 20px 15px;
+    gap: 10px;
 }
 
 /* UHUUUL */
 .overlay-text-scene5 {
     font-family: 'Playfair Display', serif;
     font-weight: 700;
-    font-size: 2rem;
-    color: #000;
-    margin-top: 10px;
-    /* empurra ele pra baixo */
 
+    font-size: clamp(1.6rem, 6vw, 2.2rem); /* 🔥 responsivo */
+
+    color: #000;
+    margin: 0;
 }
 
 /* TEXTO */
 .text-box-scene5 {
     font-family: 'Playfair Display', serif;
-    font-size: 1.4rem;
-    line-height: 1.5;
-    color: #000;
 
-    margin: 0;
+    font-size: clamp(1.1rem, 4.5vw, 1.5rem);
+    line-height: 1.5;
+
+    color: #000;
+    text-align: center;
+
+    max-width: 90%;
 }
 
 /* IMAGEM MAIOR */
 .frame {
-    width: 100%;
-    max-width: 320px;
-    /* 🔥 maior */
-    height: 420px;
-    /* 🔥 maior */
-    margin-top: -10px;
-    /* puxa a imagem pra cima */
-    border: 8px solid #d4af37;
+    width: 85%;
+    max-width: 300px;
+
+    aspect-ratio: 3 / 4; /* 🔥 responsivo automático */
+    height: auto;
+
+    border: 6px solid #d4af37;
     border-radius: 20px;
     overflow: hidden;
 
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  transition: transform 0.4s ease;
 }
 
+.frame:hover {
+    transform: scale(1.03);
+}
 .frame img {
     width: 100%;
     height: 100%;
@@ -362,12 +373,15 @@ body {
 }
 
 /* DATA */
-.date-text{
+.date-text {
     font-family: 'Playfair Display', serif;
-    font-size: 2rem;
-    color:#000;
 
-    margin-top: 15px; /* 👈 cria espaço da imagem */
+    font-size: clamp(1.6rem, 6vw, 2.2rem);
+    font-weight: 700;
+
+    color: #000;
+
+    margin: 5px 0 10px 0;
 }
 
 /* ===== RESPONSIVO ===== */
