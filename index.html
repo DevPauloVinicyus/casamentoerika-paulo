@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Convite Especial</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+  <audio id="musica" loop>
+    <source
+      src="assets/audio/Best Dance Ever!  Dirty Dancing First Wedding Dance  [I've Had] The Time of My Life _ Dovgan Dance - Dovgan Dance (youtube).mp3"
+      type="audio/mpeg">
+  </audio>
+
+  <div class="phone-frame">
+    <div class="container">
+
+      <!-- FUNDO INTELIGENTE -->
+      <div class="bg-wrapper">
+        <img src="/assets/img/moto.png" class="bg-img">
+      </div>
+
+      <!-- SCENE 1 -->
+      <div id="scene1" class="scene active">
+        <h2 class="top-text">VOCÊ ESTÁ SENDO<br> CONVOCADO</h2>
+        <button class="play-btn" onclick="iniciarConvite()">▶ PLAY</button>
+      </div>
+
+      <!-- SCENE 2 -->
+      <div id="scene2" class="scene">
+        <video id="video" class="video-bg" muted>
+          <source src="assets/video/video.mp4" type="video/mp4">
+        </video>
+        <h2 class="top-text">RESERVE ESTA<br> DATA:<br>05/06/2026</h2>
+        <p class="overlay-text-scene2">
+          <strong>
+            Não conseguimos imaginar
+            o nosso “SIM”<br>
+            sem ter você ao nosso lado.
+          </strong>
+        </p>
+      </div>
+
+      <!-- SCENE 3 -->
+      <div id="scene3" class="scene">
+
+        <p class="text-box">
+          A vida é feita de encontros e alguns deles
+          viram laços para sempre.
+
+          E é por isso que, em um dos dias mais
+          importantes das nossas vidas, queremos você
+          perto de nós!
+        </p>
+
+      </div>
+
+      <!-- SCENE 4 -->
+<div id="scene4" class="scene">
+  <h2 class="overlay-text-scene4">
+    Você aceita ser nosso Padrinho/Madrinha?
+  </h2>
+
+  <div class="btn-group">
+    <button class="btn btn-yes" onclick="confirmarPresenca()">SIM!</button><br>
+    <button class="btn btn-no" onclick="confirmarPresenca()">NÃO!</button><br>
+    <button class="btn btn-sure" onclick="confirmarPresenca()">COM CERTEZA!</button>
+  </div>
+</div>
+
+      <!-- SCENE 5 -->
+      <div id="scene5" class="scene">
+
+        <div class="content-scene5">
+
+          <h1 class="overlay-text-scene5">UHUUUL!</h1><br>
+
+          <p class="text-box">
+            Preparem o coração
+            e o traje!
+            Nos vemos no altar.
+          </p>
+          <p class="date-text">05/06/2026</p>
+
+          <div class="frame">
+            <img src="/assets/img/caricatura.png" alt="Nós dois">
+          </div>
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <script src="assets/js/script.js"></script>
+</body>
+
+</html>

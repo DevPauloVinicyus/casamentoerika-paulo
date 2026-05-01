@@ -1,0 +1,381 @@
+:root {
+    --iphone-black: #0d0d0d;
+}
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: 'Georgia', serif;
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/* ===== IPHONE ===== */
+.phone-frame {
+    width: 430px;
+    height: 932px;
+    background: var(--iphone-black);
+    border-radius: 55px;
+    padding: 12px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+}
+
+.phone-frame::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 160px;
+    height: 32px;
+    background: #000;
+    border-radius: 20px;
+    z-index: 10;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 45px;
+}
+
+/* ===== FUNDO INTELIGENTE ===== */
+.bg-wrapper {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+/* imagem principal (sem corte) */
+.bg-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 2;
+      opacity: 0.7; /* 🔥 ajuste aqui (0.3 a 0.6 ideal) */
+}
+
+/* preenchimento com a própria imagem */
+.bg-wrapper::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url('/assets/img/moto.png') center/cover no-repeat;
+    filter: blur(30px);
+    transform: scale(1.5);
+    z-index: 1;
+    
+}
+
+/* ===== RESPONSIVO ===== */
+@media(max-width:768px) {
+
+    .phone-frame {
+        width: 100%;
+        height: 100vh;
+        border-radius: 0;
+        padding: 0;
+        background: none;
+        box-shadow: none;
+    }
+
+    .phone-frame::before {
+        display: none;
+    }
+
+    .container {
+        border-radius: 0;
+    }
+}
+
+/* ===== CENAS ===== */
+.scene {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.8s ease;
+    z-index: 3;
+}
+
+.scene.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* TEXTO */
+.top-text {
+    position: absolute;
+    top: 20px;
+    text-transform: uppercase;
+    line-height: 1.3;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.9rem;
+    letter-spacing: 2px;
+    color: black;
+    text-align: center;
+    margin-top: 100px;
+}
+
+/* PLAY */
+.play-btn {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px 25px;
+    border: none;
+    border-radius: 40px;
+    font-size: 1.2rem;
+    background: #d4af37;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* VIDEO */
+.video-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+
+
+/* TEXTO SOBRE VIDEO */
+.overlay-text {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1.3;
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 15px 20px;
+    border-radius: 10px;
+    color: #fff;
+    text-align: center;
+    width: 80%;
+}
+
+.overlay-text-scene2 {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 85%;
+    max-width: 420px;
+
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 1.4;
+    letter-spacing: 1px;
+
+    color: #000; /* 🔥 texto preto */
+
+    text-align: center;
+    z-index: 2;
+
+    /* ❌ removido fundo */
+    background: none;
+    padding: 0;
+
+    /* 🔥 SOMBRA PARA DESTAQUE */
+    text-shadow:
+        1px 2px 1px rgb(255, 255, 255),
+        0px 4px 12px rgba(0,0,0,0.6);
+}
+
+
+/* ===== SCENE 3 ===== */
+#scene3{
+    position:absolute;
+    inset:0;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:20px;
+}
+
+/* ===== TEXTO ===== */
+.text-box{
+    width:99%;
+    max-width:400px;
+    top: 60%;
+    left: 50%;
+    transform: translate(2%, -40%);
+
+    font-family: 'Playfair Display', serif;
+
+    font-size:1.6rem;
+    line-height:1.6;
+    letter-spacing:0.5px;
+
+    color:#000;
+    text-align:center;
+
+    /* melhora leitura */
+    padding:15px 10px;
+  
+    border-radius:12px;
+
+    /* sombra mais equilibrada */
+    text-shadow:
+        0px 2px 3px rgba(255,255,255,0.8),
+        0px 3px 10px rgba(0,0,0,0.5);
+
+    white-space: pre-line;
+}
+
+
+
+/* BOTÕES */
+.overlay-text-scene4 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: #000;
+    margin-bottom: 10px;
+    transform: translateY(-100px);
+}
+
+.btn-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+    width: 100%;
+    max-width: 260px;
+}
+
+.btn {
+    padding: 15px;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-yes {
+    background: #d4af37;
+    color: #fff;
+}
+
+.btn-no {
+    background: #ff0606;
+    color: #fff;
+}
+
+.btn-sure {
+    background: #2c3e50;
+    color: #fff;
+}
+
+/* ===== SCENE 5 ===== */
+#scene5{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+/* container central */
+.content-scene5{
+    width:100%;
+    max-width:420px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:12px;
+}
+
+/* UHUUUL */
+.overlay-text-scene5 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: #000;
+
+    margin: 0; /* 🔥 remove espaço exagerado */
+}
+
+/* TEXTO */
+.text-box{
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    color:#000;
+
+    margin:0;
+}
+
+/* IMAGEM MAIOR */
+.frame {
+    width: 100%;
+    max-width: 320px; /* 🔥 maior */
+    height: 420px;     /* 🔥 maior */
+
+    border: 8px solid #d4af37;
+    border-radius: 20px;
+    overflow: hidden;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* DATA */
+.date-text{
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color:#000;
+
+    margin-top:5px;
+}
