@@ -42,7 +42,7 @@ function confirmarPresenca(){
 
     setTimeout(() => {
         window.open(`https://wa.me/${telefone}?text=${mensagem}`, "_blank");
-    }, 8000);
+    }, 4000);
 }
 
 /* ===== BOTÃO NÃO (FUGINDO SEM QUEBRAR LAYOUT) ===== */
