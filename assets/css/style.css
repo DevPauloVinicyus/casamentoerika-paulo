@@ -74,7 +74,8 @@ body {
     width: auto;
     height: auto;
     z-index: 2;
-      opacity: 0.7; /* 🔥 ajuste aqui (0.3 a 0.6 ideal) */
+    opacity: 0.7;
+    /* 🔥 ajuste aqui (0.3 a 0.6 ideal) */
 }
 
 /* preenchimento com a própria imagem */
@@ -86,7 +87,7 @@ body {
     filter: blur(30px);
     transform: scale(1.5);
     z-index: 1;
-    
+
 }
 
 /* ===== RESPONSIVO ===== */
@@ -211,7 +212,8 @@ body {
     line-height: 1.4;
     letter-spacing: 1px;
 
-    color: #000; /* 🔥 texto preto */
+    color: #000;
+    /* 🔥 texto preto */
 
     text-align: center;
     z-index: 2;
@@ -223,48 +225,48 @@ body {
     /* 🔥 SOMBRA PARA DESTAQUE */
     text-shadow:
         1px 2px 1px rgb(255, 255, 255),
-        0px 4px 12px rgba(0,0,0,0.6);
+        0px 4px 12px rgba(0, 0, 0, 0.6);
 }
 
 
 /* ===== SCENE 3 ===== */
-#scene3{
-    position:absolute;
-    inset:0;
+#scene3 {
+    position: absolute;
+    inset: 0;
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    padding:20px;
+    padding: 20px;
 }
 
 /* ===== TEXTO ===== */
-.text-box{
-    width:99%;
-    max-width:400px;
+.text-box {
+    width: 99%;
+    max-width: 400px;
     top: 60%;
     left: 50%;
     transform: translate(2%, -40%);
 
     font-family: 'Playfair Display', serif;
 
-    font-size:1.6rem;
-    line-height:1.6;
-    letter-spacing:0.5px;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
 
-    color:#000;
-    text-align:center;
+    color: #000;
+    text-align: center;
 
     /* melhora leitura */
-    padding:15px 10px;
-  
-    border-radius:12px;
+    padding: 15px 10px;
+
+    border-radius: 12px;
 
     /* sombra mais equilibrada */
     text-shadow:
-        0px 2px 3px rgba(255,255,255,0.8),
-        0px 3px 10px rgba(0,0,0,0.5);
+        0px 2px 3px rgba(255, 255, 255, 0.8),
+        0px 3px 10px rgba(0, 0, 0, 0.5);
 
     white-space: pre-line;
 }
@@ -314,22 +316,22 @@ body {
 }
 
 /* ===== SCENE 5 ===== */
-#scene5{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
+#scene5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 /* container central */
-.content-scene5{
-    width:100%;
-    max-width:420px;
+.content-scene5 {
+    width: 100%;
+    max-width: 420px;
 
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    gap:12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
 }
 
 /* UHUUUL */
@@ -338,26 +340,30 @@ body {
     font-weight: 700;
     font-size: 2rem;
     color: #000;
+    margin-top: 10px;
+    /* empurra ele pra baixo */
 
-    margin: 0; /* 🔥 remove espaço exagerado */
 }
 
 /* TEXTO */
-.text-box{
+.text-box {
     font-family: 'Playfair Display', serif;
     font-size: 1.4rem;
     line-height: 1.5;
-    color:#000;
+    color: #000;
 
-    margin:0;
+    margin: 0;
 }
 
 /* IMAGEM MAIOR */
 .frame {
     width: 100%;
-    max-width: 320px; /* 🔥 maior */
-    height: 420px;     /* 🔥 maior */
-
+    max-width: 320px;
+    /* 🔥 maior */
+    height: 420px;
+    /* 🔥 maior */
+    margin-top: -10px;
+    /* puxa a imagem pra cima */
     border: 8px solid #d4af37;
     border-radius: 20px;
     overflow: hidden;
@@ -377,5 +383,5 @@ body {
     font-size: 2rem;
     color:#000;
 
-    margin-top:5px;
+    margin-top: 15px; /* 👈 cria espaço da imagem */
 }
