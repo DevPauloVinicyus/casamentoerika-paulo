@@ -37,7 +37,7 @@ function confirmarPresenca(){
 
     const telefone = "5531998488478";
     const mensagem = encodeURIComponent(
-        "Olá! 💛 Aceitamos com alegria o convite para sermos padrinhos! 🥂✨"
+        "Olá! 💛 Aceito com alegria o convite para ser padrinho desta União! 🥂✨"
     );
 
     setTimeout(() => {
