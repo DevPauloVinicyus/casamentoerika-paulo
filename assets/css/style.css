@@ -385,6 +385,7 @@ body {
 }
 
 /* ===== RESPONSIVO ===== */
+
 @media (max-width: 768px) {
 
     body {
@@ -410,32 +411,24 @@ body {
     }
 
     /* ============================= */
-    /* TEXTOS */
+    /* SCENE 1 */
     /* ============================= */
 
-    .top-text {
-        font-size: clamp(1.2rem, 5vw, 1.8rem);
-        margin-top: 60px;
+    #scene1 .top-text {
+        font-size: clamp(1.6rem, 7vw, 2.2rem);
+        margin-top: 100px;
+        text-align: center;
+        width: 100%;
     }
 
-    /* 🔥 DESTACAR DATA (SCENE 2) */
-    .top-text span,
+    /* ============================= */
+    /* SCENE 2 */
+    /* ============================= */
+
     .data-destaque {
-        display: inline-block;
-        margin-top: 10px;
-
-        font-size: clamp(1.6rem, 6vw, 2.2rem);
+        font-size: clamp(1.8rem, 7vw, 2.4rem);
         font-weight: 700;
-
-        padding: 6px 12px;
-        border-radius: 10px;
-
-        background: rgba(255,255,255,0.35);
-        backdrop-filter: blur(6px);
-        -webkit-backdrop-filter: blur(6px);
-
-        border: 1px solid rgba(255,255,255,0.4);
-        box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+        font-style: italic;
     }
 
     .overlay-text-scene2 {
@@ -443,7 +436,7 @@ body {
     }
 
     /* ============================= */
-    /* SCENE 3 (SUBIR TEXTO) */
+    /* SCENE 3 */
     /* ============================= */
 
     #scene3 {
@@ -454,73 +447,102 @@ body {
     .text-box {
         font-size: clamp(1rem, 4vw, 1.3rem);
         transform: none;
+        text-align: center;
     }
 
     /* ============================= */
-    /* SCENE 4 */
+    /* SCENE 4 - AGORA SOBE DE VERDADE */
     /* ============================= */
+
+    #scene4 {
+        position: relative;
+    }
 
     .overlay-text-scene4 {
-        font-size: clamp(1.2rem, 5vw, 1.6rem);
-        transform: translateY(-40px);
+        position: absolute;
+
+        top: 60px; /* 🔥 MAIS ALTO POSSÍVEL (ajuste fino aqui se quiser) */
+        left: 50%;
+        transform: translateX(-50%);
+
+        width: 90%;
+
+        font-size: clamp(1.4rem, 5.5vw, 1.9rem);
+        text-align: center;
     }
 
+    /* botões descem independente do texto */
     .btn-group {
+        position: absolute;
+        bottom: 120px;
+
+        width: 100%;
+        max-width: 280px;
+
+        left: 50%;
+        transform: translateX(-50%);
+
+        display: flex;
+        flex-direction: column;
         gap: 14px;
-        margin-top: -10px;
     }
 
     .btn {
         font-size: 1rem;
         padding: 16px;
         border-radius: 40px;
-
-        box-shadow: 0 6px 15px rgba(0,0,0,0.25);
     }
 
     /* ============================= */
-    /* SCENE 5 AJUSTE FINO */
+    /* SCENE 5 */
     /* ============================= */
 
     .content-scene5 {
-        justify-content: center;
-        gap: 14px;
-        padding-top: 10px;
+        justify-content: space-between;
+        height: 100%;
+        padding: 20px 10px;
+    }
+
+    .topo-scene5 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
     }
 
     .overlay-text-scene5 {
         font-size: clamp(1.5rem, 6vw, 2rem);
     }
 
-    .text-box-scene5,
-    #scene5 .text-box {
+    .text-box-scene5 {
         font-size: clamp(1rem, 4vw, 1.3rem);
         text-align: center;
+        max-width: 90%;
     }
 
-    /* 🔥 DATA DESTACADA (SCENE 5) */
     .date-text {
-        font-size: clamp(1.5rem, 6vw, 2rem);
-
-        padding: 6px 12px;
-        border-radius: 10px;
-
-        background: rgba(255,255,255,0.35);
-        backdrop-filter: blur(6px);
-        -webkit-backdrop-filter: blur(6px);
-
-        border: 1px solid rgba(255,255,255,0.4);
-        box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+        font-size: clamp(1.8rem, 7vw, 2.4rem);
+        font-weight: 700;
+        font-style: italic;
+        margin-top: 5px;
     }
 
-    /* IMAGEM */
+    .baixo-scene5 {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
     .frame {
         max-width: 90%;
         height: auto;
         aspect-ratio: 3 / 4;
     }
 
+    /* ============================= */
     /* PLAY */
+    /* ============================= */
+
     .play-btn {
         bottom: 40px;
         font-size: 1rem;
