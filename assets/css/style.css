@@ -391,6 +391,40 @@ body {
     margin: 5px 0 10px 0;
 }
 
+
+/* ===== RODAPÉ DISCRETO ===== */
+.footer-credit {
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-size: 0.7rem;
+    font-family: 'Raleway', sans-serif;
+
+    color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+
+    letter-spacing: 0.5px;
+
+    z-index: 5;
+}
+
+/* LINK */
+.footer-credit a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+/* HOVER (desktop) */
+.footer-credit a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
 /* ===== RESPONSIVO ===== */
 
 @media (max-width: 768px) {
@@ -432,6 +466,10 @@ body {
     /* SCENE 2 */
     /* ============================= */
 
+    #scene2 {
+         padding-top: 50px;
+    }
+
     .data-destaque {
         font-size: clamp(1.8rem, 7vw, 2.4rem);
         font-weight: 700;
@@ -467,7 +505,7 @@ body {
         align-items: center;
 
         justify-content: flex-start;
-        padding-top: 70px;
+        padding-top: 50px;
         /* 🔥 controla altura do texto */
     }
 
@@ -552,5 +590,12 @@ body {
     .play-btn {
         bottom: 40px;
         font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-credit {
+        font-size: 0.65rem;
+        bottom: 5px;
     }
 }
