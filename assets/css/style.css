@@ -16,11 +16,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-
     min-height: 100dvh;
-    /* 🔥 melhor que 100vh */
     overflow-x: hidden;
-    /* 🔥 remove corte vertical */
 }
 
 /* ===== IPHONE ===== */
@@ -28,17 +25,13 @@ body {
     width: 100%;
     max-width: 430px;
     height: 100dvh;
-    /* 🔥 adapta ao celular real */
-
     background: var(--iphone-black);
     border-radius: 55px;
     padding: 12px;
-
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-
     box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
 }
 
@@ -64,14 +57,13 @@ body {
     border-radius: 45px;
 }
 
-/* ===== FUNDO INTELIGENTE ===== */
+/* ===== FUNDO ===== */
 .bg-wrapper {
     position: absolute;
     inset: 0;
     z-index: 0;
 }
 
-/* imagem principal (sem corte) */
 .bg-img {
     position: absolute;
     top: 50%;
@@ -79,14 +71,10 @@ body {
     transform: translate(-50%, -50%);
     max-width: 100%;
     max-height: 100%;
-    width: auto;
-    height: auto;
     z-index: 2;
     opacity: 0.7;
-    /* 🔥 ajuste aqui (0.3 a 0.6 ideal) */
 }
 
-/* preenchimento com a própria imagem */
 .bg-wrapper::before {
     content: "";
     position: absolute;
@@ -95,7 +83,6 @@ body {
     filter: blur(30px);
     transform: scale(1.5);
     z-index: 1;
-
 }
 
 /* ===== CENAS ===== */
@@ -106,8 +93,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
     padding: 20px;
+    text-align: center;
     opacity: 0;
     pointer-events: none;
     transition: 0.8s ease;
@@ -119,23 +106,22 @@ body {
     pointer-events: auto;
 }
 
-/* TEXTO */
+/* ===== TEXTOS ===== */
 .top-text {
     position: absolute;
     top: 20px;
-    text-transform: uppercase;
-    line-height: 1.3;
+    margin-top: 100px;
     font-family: 'Playfair Display', serif;
     font-weight: 700;
-    font-style: normal;
     font-size: 1.9rem;
     letter-spacing: 2px;
-    color: black;
+    text-transform: uppercase;
+    line-height: 1.3;
+    color: #000;
     text-align: center;
-    margin-top: 100px;
 }
 
-/* PLAY */
+/* ===== PLAY ===== */
 .play-btn {
     position: absolute;
     bottom: 80px;
@@ -150,124 +136,66 @@ body {
     cursor: pointer;
 }
 
-/* VIDEO */
+/* ===== VIDEO ===== */
 .video-bg {
     position: absolute;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    top: 0;
-    left: 0;
+    inset: 0;
     z-index: 1;
 }
 
-
-
-/* TEXTO SOBRE VIDEO */
-.overlay-text {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    line-height: 1.3;
-    font-family: 'Playfair Display', serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 1.5rem;
-    letter-spacing: 2px;
-    z-index: 2;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 15px 20px;
-    border-radius: 10px;
-    color: #fff;
-    text-align: center;
-    width: 80%;
-}
-
+/* ===== SCENE 2 ===== */
 .overlay-text-scene2 {
     position: absolute;
     top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
-
     width: 99%;
     max-width: 420px;
-
     font-family: 'Playfair Display', serif;
-    font-weight: 500;
-
-    /* 🔥 TEXTO RESPONSIVO */
     font-size: clamp(1rem, 4.5vw, 1.6rem);
     line-height: 1.4;
-
-    color: #000;
     text-align: center;
+    color: #000;
     z-index: 2;
 
-    /* 🔥 GLASS */
     background: rgba(255, 255, 255, 0.18);
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-
-    padding: clamp(12px, 3vw, 20px);
     border-radius: 16px;
-
+    padding: clamp(12px, 3vw, 20px);
     border: 1px solid rgba(255, 255, 255, 0.3);
-
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
 }
 
-
 /* ===== SCENE 3 ===== */
-#scene3 {
-    position: absolute;
-    inset: 0;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    padding: 20px;
-}
-
-/* ===== TEXTO ===== */
-
 .text-box {
     width: 99%;
     max-width: 400px;
-
     font-family: 'Playfair Display', serif;
-
-    /* 🔥 TEXTO RESPONSIVO */
     font-size: clamp(1rem, 4vw, 1.5rem);
     line-height: 1.6;
-
-    color: #000;
     text-align: center;
+    color: #000;
 
     padding: clamp(14px, 3vw, 22px);
-
-    /* 🔥 GLASS */
-    background: rgba(255, 255, 255, 0.18);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-
     border-radius: 16px;
 
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.3);
 
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
-
     white-space: pre-line;
 }
 
-/* BOTÕES */
+/* ===== SCENE 4 ===== */
 .overlay-text-scene4 {
     font-family: 'Playfair Display', serif;
     font-weight: 700;
     font-size: 1.8rem;
     color: #000;
-    margin-bottom: 10px;
     transform: translateY(-100px);
 }
 
@@ -275,7 +203,6 @@ body {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin-top: 10px;
     width: 100%;
     max-width: 260px;
 }
@@ -288,89 +215,48 @@ body {
     cursor: pointer;
 }
 
-.btn-yes {
-    background: #d4af37;
-    color: #fff;
-}
-
-.btn-no {
-    background: #ff0606;
-    color: #fff;
-}
-
-.btn-sure {
-    background: #2c3e50;
-    color: #fff;
-}
+.btn-yes { background: #d4af37; color: #fff; }
+.btn-no { background: #ff0606; color: #fff; }
+.btn-sure { background: #2c3e50; color: #fff; }
 
 /* ===== SCENE 5 ===== */
 #scene5 {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
 }
 
-/* container central */
 .content-scene5 {
     width: 100%;
     max-width: 420px;
     height: 100%;
-
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    /* 🔥 distribui melhor */
     align-items: center;
-
     padding: 20px 15px;
-    gap: 10px;
 }
 
-/* UHUUUL */
 .overlay-text-scene5 {
     font-family: 'Playfair Display', serif;
-    font-weight: 700;
-
     font-size: clamp(1.6rem, 6vw, 2.2rem);
-    /* 🔥 responsivo */
-
-    color: #000;
-    margin: 0;
+    font-weight: 700;
 }
 
-/* TEXTO */
 .text-box-scene5 {
     font-family: 'Playfair Display', serif;
-
     font-size: clamp(1.1rem, 4.5vw, 1.5rem);
-    line-height: 1.5;
-
-    color: #000;
     text-align: center;
-
-    max-width: 90%;
 }
 
-/* IMAGEM MAIOR */
 .frame {
     width: 85%;
     max-width: 300px;
-
-    aspect-ratio: 3 / 4;
-    /* 🔥 responsivo automático */
-    height: auto;
-
+    aspect-ratio: 3/4;
     border: 6px solid #d4af37;
     border-radius: 20px;
     overflow: hidden;
-
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-    transition: transform 0.4s ease;
-}
-
-.frame:hover {
-    transform: scale(1.03);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 }
 
 .frame img {
@@ -379,95 +265,52 @@ body {
     object-fit: cover;
 }
 
-/* DATA */
 .date-text {
-    font-family: 'Playfair Display', serif;
-
     font-size: clamp(1.6rem, 6vw, 2.2rem);
     font-weight: 700;
-
-    color: #000;
-
-    margin: 5px 0 10px 0;
 }
 
-
-/* ===== RODAPÉ DISCRETO ===== */
+/* ===== RODAPÉ ===== */
 .footer-credit {
     position: absolute;
     bottom: 8px;
     left: 50%;
     transform: translateX(-50%);
-
     font-size: 0.7rem;
     font-family: 'Raleway', sans-serif;
-
-    color: rgba(255, 255, 255, 0.6);
-
-    /* 🔥 GARANTE 1 LINHA */
+    color: rgba(255,255,255,0.6);
     white-space: nowrap;
-
-    text-align: center;
-    letter-spacing: 0.5px;
-
-    z-index: 5;
 }
 
-/* LINK */
 .footer-credit a {
-    color: rgba(255, 255, 255, 0.85);
+    color: rgba(255,255,255,0.85);
     text-decoration: none;
-    font-weight: 500;
 }
 
 .footer-credit a:hover {
     color: #fff;
-    text-decoration: underline;
 }
 
 /* ===== RESPONSIVO ===== */
-
 @media (max-width: 768px) {
 
-    body {
-        align-items: flex-start;
-    }
+    body { align-items: flex-start; }
 
     .phone-frame {
-        width: 100%;
         max-width: 100%;
-        height: 100dvh;
         border-radius: 0;
         padding: 0;
         background: #000;
         box-shadow: none;
     }
 
-    .phone-frame::before {
-        display: none;
-    }
-
-    .container {
-        border-radius: 0;
-    }
-
-    /* ============================= */
-    /* SCENE 1 */
-    /* ============================= */
+    .phone-frame::before { display: none; }
+    .container { border-radius: 0; }
 
     #scene1 .top-text {
         font-size: clamp(1.6rem, 7vw, 2.2rem);
-        margin-top: 100px;
         text-align: center;
         width: 100%;
-    }
-
-    /* ============================= */
-    /* SCENE 2 */
-    /* ============================= */
-
-    #scene2 {
-         padding-top: 50px;
     }
 
     .data-destaque {
@@ -476,124 +319,41 @@ body {
         font-style: italic;
     }
 
-    .overlay-text-scene2 {
-        font-size: clamp(1rem, 4.5vw, 1.4rem);
-    }
-
-    /* ============================= */
-    /* SCENE 3 */
-    /* ============================= */
-
     #scene3 {
         justify-content: flex-start;
         padding-top: 70px;
     }
 
-    .text-box {
-        font-size: clamp(1rem, 4vw, 1.3rem);
-        transform: none;
-        text-align: center;
-    }
-
-    /* ============================= */
-    /* SCENE 4 - CORRIGIDO (SEM SUMIR BOTÕES) */
-    /* ============================= */
-
     #scene4 {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
         justify-content: flex-start;
         padding-top: 50px;
-        /* 🔥 controla altura do texto */
     }
 
-    /* TEXTO MAIS ALTO */
     .overlay-text-scene4 {
-        width: 90%;
-        text-align: center;
-
         font-size: clamp(1.4rem, 5.5vw, 1.9rem);
-
         margin-bottom: 30px;
-        /* 🔥 espaço pros botões */
     }
 
-    /* BOTÕES SEM ABSOLUTE (NUNCA SOMEM) */
-    .btn-group {
-        width: 100%;
-        max-width: 280px;
-
-        display: flex;
-        flex-direction: column;
-        gap: 14px;
-    }
-
-    /* BOTÕES */
-    .btn {
-        font-size: 1rem;
-        padding: 16px;
-        border-radius: 40px;
-    }
-
-    /* ============================= */
-    /* SCENE 5 */
-    /* ============================= */
+    .btn { padding: 16px; }
 
     .content-scene5 {
         justify-content: space-between;
-        height: 100%;
-        padding: 20px 10px;
-    }
-
-    .topo-scene5 {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .overlay-text-scene5 {
-        font-size: clamp(1.5rem, 6vw, 2rem);
-    }
-
-    .text-box-scene5 {
-        font-size: clamp(1rem, 4vw, 1.3rem);
-        text-align: center;
-        max-width: 90%;
     }
 
     .date-text {
         font-size: clamp(1.8rem, 7vw, 2.4rem);
-        font-weight: 700;
         font-style: italic;
-        margin-top: 5px;
-    }
-
-    .baixo-scene5 {
-        display: flex;
-        justify-content: center;
-        width: 100%;
     }
 
     .frame {
         max-width: 90%;
-        height: auto;
-        aspect-ratio: 3 / 4;
     }
-
-    /* ============================= */
-    /* PLAY */
-    /* ============================= */
 
     .play-btn {
         bottom: 40px;
         font-size: 1rem;
     }
-}
 
-@media (max-width: 768px) {
     .footer-credit {
         font-size: 0.65rem;
         bottom: 5px;
