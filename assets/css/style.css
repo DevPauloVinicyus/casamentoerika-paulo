@@ -265,10 +265,14 @@ body {
 .overlay-text-scene4 {
     font-family: 'Playfair Display', serif;
     font-weight: 700;
+
     font-size: 1.8rem;
     color: #000;
-    margin-bottom: 10px;
-    transform: translateY(-100px);
+
+    margin-top: 10px;   /* 🔥 controla altura como na scene 5 */
+    margin-bottom: 20px;
+
+    transform: none; /* 🔥 remove o problema */
 }
 
 .btn-group {
