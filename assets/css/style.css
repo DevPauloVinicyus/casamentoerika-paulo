@@ -403,8 +403,11 @@ body {
     font-family: 'Raleway', sans-serif;
 
     color: rgba(255, 255, 255, 0.6);
-    text-align: center;
 
+    /* 🔥 GARANTE 1 LINHA */
+    white-space: nowrap;
+
+    text-align: center;
     letter-spacing: 0.5px;
 
     z-index: 5;
@@ -412,16 +415,13 @@ body {
 
 /* LINK */
 .footer-credit a {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.85);
     text-decoration: none;
     font-weight: 500;
-
-    transition: 0.3s;
 }
 
-/* HOVER (desktop) */
 .footer-credit a:hover {
-    color: #ffffff;
+    color: #fff;
     text-decoration: underline;
 }
 
