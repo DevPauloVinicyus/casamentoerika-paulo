@@ -161,8 +161,6 @@ body {
     z-index: 1;
 }
 
-
-
 /* TEXTO SOBRE VIDEO */
 .overlay-text {
     position: absolute;
@@ -358,8 +356,8 @@ body {
 
 /* IMAGEM MAIOR */
 .frame {
-    width: 85%;
-    max-width: 300px;
+    width: 99%;
+    max-width: 550px;
 
     aspect-ratio: 3 / 4;
     /* 🔥 responsivo automático */
@@ -471,7 +469,7 @@ body {
     /* ============================= */
 
     #scene2 {
-         padding-top: 30px;
+         padding-top: 50px;
     }
 
     .data-destaque {
